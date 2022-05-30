@@ -1,14 +1,16 @@
+import Header from "../componentes/Header";
 
 
 
 
-function App() {
+function PokeListPage() {
     return (
       <div >
         
+        <Header actualPage={"pokelist"}/>
       </div>
     );
-  }
+  } 
   
-  export default App;
+  export default PokeListPage;
   
