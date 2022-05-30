@@ -1,13 +1,16 @@
+import { useNavigate } from "react-router-dom";
+import Header from "../componentes/Header";
 
 
 
-function App() {
+function PokeDetailsList() {
+
     return (
       <div >
-        
+      
       </div>
     );
   }
   
-  export default App;
+  export default PokeDetailsList;
   

@@ -3,13 +3,13 @@
 
 
 
-function App() {
+function PokedexPage() {
     return (
       <div >
-        
+        Pokedex
       </div>
     );
   }
   
-  export default App;
+  export default PokedexPage;
   
