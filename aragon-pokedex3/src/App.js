@@ -1,13 +1,11 @@
-import Router from "./Router/Router";
-
-
-
+import Router from "./routes/Router";
+import GlobalState from "./global/GlobalState";
 
 function App() {
   return (
-
-      <Router/>
-
+    <GlobalState>
+      <Router />
+    </GlobalState>
   );
 }
 
