@@ -18,12 +18,14 @@ const getData = () =>{
         alert(err.message)
     })
 
-    useEffect=(() => {
-        getData()
-    },[path])
 }
 
-return [getData,data]
+
+useEffect(() => {
+    getData()
+},[path])
+
+return [data, getData]
 
 
 
