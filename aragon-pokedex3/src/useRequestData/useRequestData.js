@@ -1,5 +1,5 @@
 import axios from "axios"
-import { BASE_URL } from "../url/urls,js"
+import { BASE_URL } from "../url/urls"
 import { useEffect, useState } from "react"
 
 

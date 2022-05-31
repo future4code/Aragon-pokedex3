@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { goToPokedex, goToPokeListPage, goToPreviousPage } from "../Router/coodernadas"
+import { goToPokedexPage, goToPokeListPage, goToPreviousPage } from "../Router/coodernadas"
 
 
 function Header(props) {
@@ -13,7 +13,7 @@ function Header(props) {
                     <div>
                         <h1>Pokemons</h1>
                         <nav>
-                            <button onClick={() => goToPokedex(navigate)}>Ir para Pokedex</button>
+                            <button onClick={() => goToPokedexPage(navigate)}>Ir para Pokedex</button>
                         </nav>
                     </div>
                 )
