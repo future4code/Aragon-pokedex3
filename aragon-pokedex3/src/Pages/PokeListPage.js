@@ -20,7 +20,6 @@ function PokeListPage() {
             />
         );
     }) : <p>CARREGANDO...</p>
-
     return (
         <>
             <Header
