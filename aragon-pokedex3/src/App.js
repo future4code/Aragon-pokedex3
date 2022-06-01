@@ -1,6 +1,9 @@
 import Router from "./routes/Router";
 import GlobalState from "./global/GlobalState";
 
+
+
+// teste para //
 function App() {
   return (
     <GlobalState>
@@ -8,5 +11,6 @@ function App() {
     </GlobalState>
   );
 }
+
 
 export default App;
