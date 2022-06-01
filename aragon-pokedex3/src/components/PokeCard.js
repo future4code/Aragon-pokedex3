@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { goToPokeDetailsPage } from '../Router/coodernadas';
+
+import { goToPokeDetailsPage } from '../routes/coordinator';
 
 function PokeCard(props) {
     const navigate = useNavigate();
+
     const { id, name } = props.pokemon;
 
     return (

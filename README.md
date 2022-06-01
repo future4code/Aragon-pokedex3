@@ -1,14 +1,14 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Adriana Nogueira 
+- Sophia Mendonça
+- Jorge
 
-Link do Surge: www.link.com.br
+Link do Surge: https://pokedex-dia1.surge.sh/
 
 O que funciona:
-- Item 1
+- Ate o momento solicitado todos funcionam
 - Item 2
 
 O que não funciona: 

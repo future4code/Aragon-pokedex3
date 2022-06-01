@@ -1,10 +1,17 @@
-import Header from "../componentes/Header";
-import PokeCard from "../componentes/PokeCard";
-import useRequestData from '../useRequestData/useRequestData';
+import { useContext, useEffect } from "react";
+import Header from "../components/Header";
+import PokeCard from "../components/PokeCard";
+import GlobalStateContext from "../global/GlobalStateContext";
 
 function PokeListPage() {
-  
-    const [pokeList] = useRequestData("list?limit=20&offset=0", []);
+    const { states, getters } = useContext(GlobalStateContext);
+    const { pokeList } = states;
+    const { getPokeList } = getters;
+
+    useEffect(() => {
+        getPokeList();
+    }, []);
+
     const showPokeList = pokeList[0] ? pokeList.map((pokemon) => {
         return (
             <PokeCard
@@ -13,8 +20,6 @@ function PokeListPage() {
             />
         );
     }) : <p>CARREGANDO...</p>
-    
-    
     return (
         <>
             <Header

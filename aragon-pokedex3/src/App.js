@@ -1,15 +1,16 @@
-import Router from "./Router/Router";
-import GlobalState from "./global/GlobalState"
+import Router from "./routes/Router";
+import GlobalState from "./global/GlobalState";
 
 
 
+// teste para //
 function App() {
   return (
     <GlobalState>
-      <Router/>
+      <Router />
     </GlobalState>
-      
   );
 }
+
 
 export default App;
