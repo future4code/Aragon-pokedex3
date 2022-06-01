@@ -9,6 +9,9 @@ const GlobalState = (props) => {
 
   const [pokemon, setPokemon] = useState({});
 
+  const [pokemons, setPokemons] = useState([]);
+
+
   const getPokeList = () => {
     axios
       .get(`${BASE_URL}/list?limit=20&offset=0`)
@@ -29,9 +32,30 @@ const GlobalState = (props) => {
     })
   }
 
-  const states = { pokeList, pokemon };
-  const setters = { setPokeList, setPokemon };
-  const getters = { getPokeList, getPokeDetails }
+  const getAllPokeDetails = () => {
+    const newList = [];
+    pokeList.forEach((pokemon) => {
+      axios
+        .get(`${BASE_URL}/${pokemon.name}`)
+        .then((res) => {
+          newList.push(res.data);
+          
+          if (newList.length === 20) {
+            const orderedList = newList.sort((a, b) => {
+              return a.id - b.id;
+            });
+            setPokemons(orderedList);
+          }
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
+    });
+  };
+
+  const states = { pokeList, pokemon, pokemons };
+  const setters = { setPokeList, setPokemon, setPokemons };
+  const getters = { getPokeList, getPokeDetails, getAllPokeDetails}
 
   return (
  

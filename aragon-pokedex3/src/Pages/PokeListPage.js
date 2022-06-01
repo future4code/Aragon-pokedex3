@@ -5,14 +5,18 @@ import GlobalStateContext from "../global/GlobalStateContext";
 
 function PokeListPage() {
     const { states, getters } = useContext(GlobalStateContext);
-    const { pokeList } = states;
-    const { getPokeList } = getters;
+    const { pokeList, pokemons } = states;
+    const { getPokeList, getAllPokeDetails } = getters;
 
     useEffect(() => {
-        getPokeList();
-    }, []);
+        if (!pokeList.length) {
+            getPokeList();
+        } else {
+            getAllPokeDetails();
+        }
+    }, [pokeList])
 
-    const showPokeList = pokeList[0] ? pokeList.map((pokemon) => {
+    const showPokeList = pokemons[0] ? pokemons.map((pokemon) => {
         return (
             <PokeCard
                 key={pokemon.id}
