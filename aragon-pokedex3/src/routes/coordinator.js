@@ -1,5 +1,3 @@
-// Arquivo coordinator.js -> Responsável por agrupar as funções de rotas.
-
 export const goToPokeListPage = (navigate) => {
     navigate("/");
   };
