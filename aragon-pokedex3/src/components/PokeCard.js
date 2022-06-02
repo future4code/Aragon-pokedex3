@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { useContext } from "react";
 import GlobalStateContext from "../global/GlobalStateContext";
-import { goToPokeDetailsPage } from '../routes/coordinator';
 
+import { goToPokeDetailsPage } from '../routes/coordinator';
 function PokeCard(props) {
     const navigate = useNavigate();
 
@@ -16,18 +18,14 @@ function PokeCard(props) {
         const orderedPokedex = newPokedex.sort((a, b) => {
             return a.id - b.id;
         });
-
         setPokedex(orderedPokedex);
     };
-
     const removeFromPokedex = () => {
         const newPokedex = pokedex.filter((poke) => {
             return id !== poke.id;
         });
-
         setPokedex(newPokedex);
     };
-
     return (
         <section>
             <span>{name.toUpperCase()} - </span>

@@ -3,14 +3,18 @@ import Header from "../components/Header";
 import PokeCard from "../components/PokeCard";
 import GlobalStateContext from "../global/GlobalStateContext";
 
+
 function PokeListPage() {
+
     const { states, setters, getters } = useContext(GlobalStateContext);
     const { pokeList, pokemons, pokedex, page, isLoading } = states;
     const { setPage } = setters;
     const { getPokeList, getAllPokeDetails } = getters;
 
+    
     useEffect(() => {
         if (!pokeList.length) {
+
             getPokeList(page);
         } else {
             getAllPokeDetails();
@@ -44,8 +48,10 @@ function PokeListPage() {
             );
         }) : <p>CARREGANDO...</p>
 
+
     return (
         <>
+            
             <Header
                 actualPage={"pokedetailslist"}
             />
