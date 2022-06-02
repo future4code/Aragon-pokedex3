@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-
 import { goToPokeListPage } from '../routes/coordinator';
 
 function ErrorPage() {
