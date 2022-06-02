@@ -43,7 +43,7 @@ function PokeListPage() {
                 <PokeCard
                     key={pokemon.id}
                     pokemon={pokemon}
-                    actualPage={"pokedetailslist"}
+                    actualPage={"pokelist"}
                 />
             );
         }) : <p>CARREGANDO...</p>
@@ -53,7 +53,7 @@ function PokeListPage() {
         <>
             
             <Header
-                actualPage={"pokedetailslist"}
+                actualPage={"pokelist"}
             />
             <hr />
             <main>

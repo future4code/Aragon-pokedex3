@@ -1,4 +1,4 @@
-import { useContext } from "react";
+
 import Header from "../components/Header";
 import {useContext} from "react";
 import PokeCard from "../components/PokeCard";
@@ -18,15 +18,9 @@ function PokedexPage() {
     })
     return(
         <>
-            <Header 
-               actualPage={"pokedex"}
-            />
-        );
-    })
-    return(
-        <>
            <Header
                 actualPage={"pokedex"}    
+            />
             <hr />
             <main>
                 <h1>Lista Pokedex</h1>

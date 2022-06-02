@@ -56,8 +56,8 @@ import { limit } from "../constants/pagination";
         });
     });
   };
-  const states = { pokeList, pokemon, pokemons, pokedex };
-  const setters = { setPokeList, setPokemon, setPokemons, setPokedex };
+  const states = { page, pokeList, pokemon, pokemons, pokedex };
+  const setters = { setPage, setPokeList, setPokemon, setPokemons, setPokedex };
   const getters = { getPokeList, getPokeDetails, getAllPokeDetails };
   return (
    <GlobalStateContext.Provider value={{ states, setters, getters }}>
