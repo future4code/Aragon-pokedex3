@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PokeListPage from "../Pages/PokeListPage"
+import PokeListPage from '../Pages/PokeListPage';
 import PokedexPage from '../Pages/PokedexPage';
 import PokeDetailsPage from '../Pages/PokeDetailsPage';
 import ErrorPage from '../Pages/ErrorPage';
