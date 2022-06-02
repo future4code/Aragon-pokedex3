@@ -5,6 +5,7 @@ import { goToPokeDetailsPage } from '../routes/coordinator';
 
 function PokeCard(props) {
     const navigate = useNavigate();
+
     const { states, setters } = useContext(GlobalStateContext);
     const { pokedex } = states;
     const { setPokedex } = setters;
@@ -14,8 +15,17 @@ function PokeCard(props) {
         const newPokedex = [...pokedex, props.pokemon];
         const orderedPokedex = newPokedex.sort((a, b) => {
             return a.id - b.id;
-          });
+        });
+
         setPokedex(orderedPokedex);
+    };
+
+    const removeFromPokedex = () => {
+        const newPokedex = pokedex.filter((poke) => {
+            return id !== poke.id;
+        });
+
+        setPokedex(newPokedex);
     };
 
     return (
@@ -25,11 +35,10 @@ function PokeCard(props) {
             <figure>
                 <img src={images.front} alt={`Foto frontal de ${name}`}></img>
             </figure>
-
-            {props.actualPage === "pokelist" ? 
+            {props.actualPage === "pokelist" ?
                 <button onClick={addToPokedex}>Adicionar a Pokedex</button>
-                : <button>Remover da Pokedex</button>
-            }            
+                : <button onClick={removeFromPokedex}>Remover da Pokedex</button>
+            }
             <button onClick={() => goToPokeDetailsPage(navigate, name)}>Ver detalhes</button>
             <hr />
         </section>
