@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Sophia Mendonça
 - Jorge
 
-Link do Surge: https://parallel-school.surge.sh
+Link do Surge: pokedex-grupo3.surge.sh
 
 O que funciona:
 - Ate o momento solicitado todos funcionam
