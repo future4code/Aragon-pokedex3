@@ -27,13 +27,18 @@ const PokeCard1  = styled.div `
 `
 
 const Container = styled.div `
-background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	
 	animation: gradient 15s ease infinite;
-  margin: 2rem;
-  font-family: "Roboto";
-  padding: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin: 2rem;
+    font-family: "Roboto";
+    padding: 40px;
+   
+  @media(max-whidth:800px){
+    flex-direction: column;
+    position: relative;
+    
+}
 
 `
 
