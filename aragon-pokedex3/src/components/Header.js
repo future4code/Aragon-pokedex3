@@ -4,13 +4,14 @@ import { goToPokedexPage, goToPokeListPage, goToPreviousPage } from '../routes/c
 
 
 const Body = styled.body`
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  margin: 0;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  font-family: "Roboto";
+@media(max-whidth:800px){
+    flex-direction: column;
+    position: relative;
+    }
+    margin: 0;
+     padding: 20px;
+    font-family: "Roboto";
+    align-items: center;
 `
 
 const Botao = styled.button`

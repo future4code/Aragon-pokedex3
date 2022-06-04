@@ -7,14 +7,19 @@ import styled from "styled-components"
 
 
 const Container = styled.div`
+@media(max-whidth:800px){
+    flex-direction: column;
+    position: relative;
+    
+}
+position: relative;
+height: 100vh;
+width: 100vw;
 background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-background-size: 400% 400%;
 animation: gradient 15s ease infinite;
 margin: 2rem;
 font-family: "Roboto";
 padding: 40px;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
 `
 function PokedexPage() {
     const { states } = useContext(GlobalStateContext);

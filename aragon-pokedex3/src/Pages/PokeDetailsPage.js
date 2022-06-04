@@ -7,30 +7,30 @@ import styled from "styled-components"
 
 const Body = styled.body`
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   margin: 20px;
   padding: 10px;
- 
+  position: relative;
+    height: 100vh;
+    width: 100vw;
+  @media(max-whidth:800px){
+    flex-direction: column;
+    position: relative;
+    
+}
   
 `
 const PokeCard1  = styled.div `
 padding: 1rem;
-border-radius: 20px;
-background-color: white;
 text-align: center;
 font-family: "Roboto";
 text-transform: uppercase;
 font-size: 1.2rem;
 font-weight: 900;
-display:flex;
-flex-direction:column;
-align-items: center;
-border:1px solid black;
 margin:1rem;
-justify-content: center;
 height:20rem;
 width: 20rem;
+justify-content: space-between;
 
 `
 const Container = styled.div`
@@ -43,7 +43,6 @@ font-family: "Roboto";
 
 function PokeDetailsPage() {
     const params = useParams();
-
     const { states, getters } = useContext(GlobalStateContext);
     const { pokemon } = states;
     const { getPokeDetails } = getters;
@@ -55,13 +54,13 @@ function PokeDetailsPage() {
  
     const pokeDetail = pokemon.name ? (
         <Container>
-            <Container>
+            <>
                 <h2>{pokemon.name.toUpperCase()}</h2>
                 <img src={pokemon.images.front} alt={`${pokemon.name} de frente`} />
                 <img src={pokemon.images.back} alt={`${pokemon.name} de costas`} />
-            </Container>
+            </>
           
-            <Container>
+            <>
                 <h2>Status:</h2>
              
                 {pokemon.status.map((stat) => {
@@ -74,8 +73,8 @@ function PokeDetailsPage() {
                         
                     )
                 })}
-            </Container>
-            <Container>
+            </>
+            <>
                 <h2>Tipos: </h2>
               
                 {pokemon.types.map((type) => {
@@ -83,8 +82,8 @@ function PokeDetailsPage() {
                         <li key={type}>{type}</li>
                     )
                 })}
-            </Container>
-            <Container>
+            </>
+            <>
                 <h2>Habilidades: </h2>
               
                 {pokemon.abilities.filter((ability, index) => {
@@ -96,7 +95,7 @@ function PokeDetailsPage() {
                         <li key={ability}>{ability}</li>
                     )
                 })}
-            </Container>
+            </>
         </Container>
 
     ) : <p>CARREGANDO...</p>
